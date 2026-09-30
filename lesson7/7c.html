@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>7c</title>
+</head>
+<body>
+
+<button onclick="greet('Simon')">With Name</button>
+<button onclick="greet()">Without Name</button>
+
+<script>
+function greet(name) {
+
+    if (name) {
+        console.log(`Hello ${name}!`);
+    } else {
+        console.log('Hi there!');
+    }
+
+}
+
+greet('Simon');
+greet();
+</script>
+
+</body>
+</html>
