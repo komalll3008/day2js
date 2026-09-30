@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 6k</title>
+</head>
+<body>
+
+<button onclick="addToCart()">Add to cart</button>
+
+<script>
+    let cartQuantity = 9;
+
+    function addToCart() {
+        if (cartQuantity + 1 > 10) {
+            alert("The cart is full");
+        } else {
+            cartQuantity++;
+            console.log(cartQuantity);
+        }
+    }
+</script>
+
+</body>
+</html>

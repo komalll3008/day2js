@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 6l</title>
+</head>
+<body>
+
+<button onclick="removeOne()">-1</button>
+<button onclick="removeTwo()">-2</button>
+<button onclick="removeThree()">-3</button>
+
+<script>
+    let cartQuantity = 5;
+
+    function removeOne() {
+        if (cartQuantity - 1 < 0) {
+            alert("Not enough items in the cart");
+        } else {
+            cartQuantity -= 1;
+            console.log(cartQuantity);
+        }
+    }
+
+    function removeTwo() {
+        if (cartQuantity - 2 < 0) {
+            alert("Not enough items in the cart");
+        } else {
+            cartQuantity -= 2;
+            console.log(cartQuantity);
+        }
+    }
+
+    function removeThree() {
+        if (cartQuantity - 3 < 0) {
+            alert("Not enough items in the cart");
+        } else {
+            cartQuantity -= 3;
+            console.log(cartQuantity);
+        }
+    }
+</script>
+
+</body>
+</html>
