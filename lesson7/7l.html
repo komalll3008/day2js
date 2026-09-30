@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>7l - Cart</title>
+</head>
+<body>
+
+<h2>Cart Quantity</h2>
+
+<button onclick="updateCartQuantity(1)">+1</button>
+<button onclick="updateCartQuantity(2)">+2</button>
+<button onclick="updateCartQuantity(-1)">-1</button>
+<button onclick="updateCartQuantity(-2)">-2</button>
+
+<p id="cart">Cart quantity: 0</p>
+
+<script>
+let cartQuantity = 0;
+
+function updateCartQuantity(change) {
+
+    if (cartQuantity + change > 10) {
+
+        alert('The cart is full');
+
+        return;
+    }
+
+    if (cartQuantity + change < 0) {
+
+        alert('Not enough items in the cart');
+
+        return;
+    }
+
+    cartQuantity += change;
+
+    document.getElementById('cart').innerHTML =
+        `Cart quantity: ${cartQuantity}`;
+}
+</script>
+
+</body>
+</html>
