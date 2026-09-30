@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>7f</title>
+</head>
+<body>
+
+<button onclick="testConversion()">Convert</button>
+
+<p id="result"></p>
+
+<script>
+function convertToFahrenheit(celsius) {
+    return (celsius * 9 / 5) + 32;
+}
+
+function convertToCelsius(fahrenheit) {
+    return (fahrenheit - 32) * 5 / 9;
+}
+
+function convertTemperature(degrees, unit) {
+
+    if (unit === 'C') {
+        return `${convertToFahrenheit(degrees)}F`;
+    }
+
+    if (unit === 'F') {
+        return `${convertToCelsius(degrees)}C`;
+    }
+}
+
+function testConversion() {
+
+    const result1 = convertTemperature(25, 'C');
+    const result2 = convertTemperature(86, 'F');
+
+    document.getElementById('result').innerHTML =
+        `${result1}<br>${result2}`;
+
+    console.log(result1);
+    console.log(result2);
+}
+
+testConversion();
+</script>
+
+</body>
+</html>
